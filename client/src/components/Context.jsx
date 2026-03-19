@@ -7,7 +7,7 @@ export const Context = createContext()
 
 const ContextProvider = (props) => {
 
-  const url = "http://localhost:4000"
+  const url = import.meta.env.VITE_API_URL || "http://localhost:4000"
   const [user,setUser] = useState(null)
   const contextValue = {
     url,
