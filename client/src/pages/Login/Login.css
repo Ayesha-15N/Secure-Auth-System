@@ -1,0 +1,300 @@
+.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--nav-height));
+  padding: 2rem;
+}
+
+.login-signup-form {
+  max-width: 46rem;
+  width: 100%;
+  background: var(--card-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--card-border);
+  border-radius: 2.4rem;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.login-signup-form h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.login-signup-form > p {
+  font-size: 1.7rem;
+  color: var(--text-secondary);
+}
+
+/* ── Inputs ── */
+.input-field {
+  background: var(--input-bg) !important;
+  border: 1px solid var(--input-border) !important;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input-field:focus-within {
+  border-color: rgba(108, 99, 255, 0.65) !important;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.12) !important;
+}
+
+.input-field input {
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.input-field input::placeholder {
+  color: var(--text-secondary);
+  font-size: 1.55rem;
+}
+
+.input-field img {
+  opacity: 0.4;
+  filter: brightness(10);
+  flex-shrink: 0;
+}
+
+/* ── Error messages ── */
+.error-msg {
+  color: var(--error-color);
+  font-size: 1.4rem;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.error-msg::before {
+  content: "!";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  background: var(--error-color);
+  color: white;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Submit button ── */
+button[type="submit"] {
+  background: var(--gradient);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 6px 24px rgba(108, 99, 255, 0.35);
+  font-family: "Outfit", sans-serif;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.45);
+}
+
+button[type="submit"]:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Forgot password link ── */
+.forgot-link span {
+  font-size: 1.5rem;
+  color: var(--primary);
+  /* color: var(--text-secondary); */
+  transition: color 0.2s;
+}
+
+.forgot-link:hover span {
+  color: var(--primary);
+}
+
+/* ── Switch state row ── */
+.sign-btn {
+  margin-top: 2px;
+}
+
+.sign-btn p {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.switch-link {
+  font-size: 1.5rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.switch-link:hover {
+  opacity: 0.75;
+}
+
+/* ── Password Strength ── */
+.strength-bar {
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.35s ease, background-color 0.35s ease;
+}
+
+.strength-label {
+  font-size: 1.35rem;
+  font-weight: 600;
+  min-width: 4rem;
+  text-align: right;
+}
+
+.strength-hints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.hint {
+  font-size: 1.3rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  transition: all 0.25s ease;
+}
+
+.hint.met {
+  color: var(--success-color);
+  border-color: rgba(81, 207, 102, 0.25);
+  background: rgba(81, 207, 102, 0.08);
+}
+
+/* ── Divider ── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0 16px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.divider span {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* ── Google button ── */
+.google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  font-size: 1.55rem;
+  font-weight: 500;
+  font-family: "Outfit", sans-serif;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  margin-bottom: 18px;
+}
+
+.google-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-1px);
+}
+
+.google-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.google-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.google-btn svg {
+  flex-shrink: 0;
+}
+
+/* ── Step indicator dots ── */
+.step-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
+}
+
+.step-dot.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: scale(1.25);
+  width: 24px;
+  border-radius: 5px;
+}
+
+.step-dot.done {
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+
+/* ── Small screen form padding ── */
+@media (max-width: 400px) {
+  .login-signup-form {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ── Chrome autofill override ── */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: white !important;
+  background-color: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}

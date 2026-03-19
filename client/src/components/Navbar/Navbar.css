@@ -1,0 +1,22 @@
+.navbar {
+  min-height: var(--nav-height);
+}
+
+.logo {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.nav-left h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6c63ff, #3ecfcf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.login-btn span {
+  font-size: 1.4rem;
+  color: white;
+}
