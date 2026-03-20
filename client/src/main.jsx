@@ -6,8 +6,10 @@ import { BrowserRouter} from 'react-router-dom';
 import ContextProvider from './components/Context.jsx';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
+const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || "placeholder";
+
 createRoot(document.getElementById('root')).render(
-  <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
+  <GoogleOAuthProvider clientId={googleClientId}>
     <BrowserRouter>
       <ContextProvider>
         <App />
